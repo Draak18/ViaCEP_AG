@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Draak18/ViaCEP_AG/issues"
   },
-  "homepage": "https://github.com/Draak18/ViaCEP_AG#readme"
+  "homepage": "https://github.com/Draak18/ViaCEP_AG#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }

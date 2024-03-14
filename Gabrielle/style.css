@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f27024;
+  color: white;
+  height: 10vh;
+}
+
+.conteudos {
+  display: flex;
+}
+
+.cidade,
+#imgCidade {
+  display: flex;
+  -ms-flex-align: end;
+  height: 10vh;
+  width: 25vh;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 640px) {
+}
