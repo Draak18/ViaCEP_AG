@@ -1,23 +1,113 @@
-.cidadePai{
-    display:flex;
-    justify-content: center;
-    align-items:flex-end;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.cidade{
-    width: 100vh;
-    height: 40vh;
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("./fonts/Poppins/Poppins-Medium.ttf");
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
 
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0228a3;
+  color: white;
+  height: 10vh;
+}
 
+.cabecalho,
+#titulo {
+  font-size: 25px;
+  margin: 0;
+  font-family: "Poppins";
+  letter-spacing: 3px;
+}
 
+.inicioPai {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 45vh;
+}
 
+.finalPai {
+  display: flex;
+  height: 45vh;
+}
 
+.cepPai {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 
+.botaoCep {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 14vh;
+  font-family: "Poppins";
+  background-color: #d4d4d4;
+  color: #1f1f1f;
+}
 
+.digiteCep {
+  border: 1px solid #ccc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  font-family: "Poppins";
+  height: 8vh;
+  width: 55vh;
+}
 
+.digiteCep:focus {
+  outline: none;
+}
 
+.resultadosPai {
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.logradouro,
+.numero,
+.bairro,
+.cidade,
+.estado {
+  margin-top: 5vh;
+  font-family: "Poppins";
+}
 
+.imgCidade,
+img {
+  opacity: 90%;
+  display: flex;
+  margin-top: auto;
+  width: auto;
+  height: auto;
+}
 
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 640px) {
+}

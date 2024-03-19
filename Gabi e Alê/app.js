@@ -1,52 +1,59 @@
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("buscarButton")
+    .addEventListener("click", function () {
+      var cepValue = document.getElementById("cep").value;
+      pesquisacep(cepValue);
+    });
+
+  document.getElementById("cep").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      var cepValue = document.getElementById("cep").value;
+      pesquisacep(cepValue);
+    }
+  });
+});
 
 function limpa_formulário_cep() {
-    document.getElementById('rua').value = ("");
-    document.getElementById('bairro').value = ("");
-    document.getElementById('cidade').value = ("");
-    document.getElementById('uf').value = ("");
+  document.getElementById("rua").innerText = "";
+  document.getElementById("numero").innerText = "";
+  document.getElementById("bairro").innerText = "";
+  document.getElementById("cidade").innerText = "";
+  document.getElementById("uf").innerText = "";
 }
 
 function meu_callback(conteudo) {
-    if (!("erro" in conteudo)) {
-        document.getElementById('rua').value = (conteudo.logradouro);
-        document.getElementById('bairro').value = (conteudo.bairro);
-        document.getElementById('cidade').value = (conteudo.localidade);
-        document.getElementById('uf').value = (conteudo.uf);
-    }
-    else {
-        limpa_formulário_cep();
-        alert("CEP não encontrado.");
-    }
+  if (!("erro" in conteudo)) {
+    document.getElementById("rua").innerText = conteudo.logradouro;
+    document.getElementById("numero").innerText = conteudo.numero;
+    document.getElementById("bairro").innerText = conteudo.bairro;
+    document.getElementById("cidade").innerText = conteudo.localidade;
+    document.getElementById("uf").innerText = conteudo.uf;
+  } else {
+    limpa_formulário_cep();
+    alert("CEP não encontrado.");
+  }
 }
 
 function pesquisacep(valor) {
+  var cep = valor.replace(/\D/g, "");
 
-    var cep = valor.replace(/\D/g, '');
+  if (cep != "") {
+    var validacep = /^[0-9]{8}$/;
 
-    if (cep != "") {
+    if (validacep.test(cep)) {
+      limpa_formulário_cep();
 
-        var validacep = /^[0-9]{8}$/;
-
-        if (validacep.test(cep)) {
-
-            document.getElementById('rua').value = "...";
-            document.getElementById('bairro').value = "...";
-            document.getElementById('cidade').value = "...";
-            document.getElementById('uf').value = "...";
-
-            var script = document.createElement('script');
-
-            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
-
-            document.body.appendChild(script);
-
-        } 
-        else {
-            limpa_formulário_cep();
-            alert("Formato de CEP inválido.");
-        }
-    } 
-    else {
-        limpa_formulário_cep();
+      var script = document.createElement("script");
+      script.src =
+        "https://viacep.com.br/ws/" + cep + "/json/?callback=meu_callback";
+      document.body.appendChild(script);
+    } else {
+      limpa_formulário_cep();
+      alert("Formato de CEP inválido.");
     }
-};
+  } else {
+    limpa_formulário_cep();
+  }
+}
