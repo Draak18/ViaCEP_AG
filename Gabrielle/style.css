@@ -1,23 +1,31 @@
-.cidadePai{
-    display:flex;
-    justify-content: center;
-    align-items:flex-end;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.cidade{
-    width: 100vh;
-    height: 40vh;
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f27024;
+  color: white;
+  height: 10vh;
 }
 
+.conteudos {
+  display: flex;
+}
 
+.cidade,
+#imgCidade {
+  display: flex;
+  -ms-flex-align: end;
+  height: 10vh;
+  width: 25vh;
+}
 
+@media screen and (max-width: 1200px) {
+}
 
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 640px) {
+}
