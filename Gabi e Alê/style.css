@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: #567281; */
   background-color: #0228a3;
   color: white;
   height: 10vh;
@@ -54,6 +55,7 @@ body {
 .botaoCep {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-left: 0px;
   border: 1px solid #ccc;
   display: flex;
   text-align: center;
@@ -62,7 +64,7 @@ body {
   height: 8vh;
   width: 14vh;
   font-family: "Poppins";
-  background-color: #d4d4d4;
+  background-color: #ebebeb;
   color: #1f1f1f;
 }
 
@@ -97,12 +99,15 @@ body {
   font-family: "Poppins";
 }
 
-.imgCidade,
-img {
-  opacity: 90%;
+.imgCidade {
   display: flex;
+  align-items: center;
   margin-top: auto;
-  width: auto;
+  width: 100%;
+}
+
+.imgCidade img {
+  max-width: 100%;
   height: auto;
 }
 
