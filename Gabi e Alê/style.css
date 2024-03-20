@@ -20,8 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #567281; */
-  background-color: #0228a3;
+  background-color: #084b71;
   color: white;
   height: 10vh;
 }
@@ -95,8 +94,12 @@ body {
 .bairro,
 .cidade,
 .estado {
-  margin-top: 5vh;
+  margin-top: 8vh;
   font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgCidade {
