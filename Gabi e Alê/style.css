@@ -85,6 +85,7 @@ body {
 }
 
 .resultadosPai {
+  margin-top: 15vh;
   display: flex;
   justify-content: space-evenly;
 }
@@ -94,12 +95,32 @@ body {
 .bairro,
 .cidade,
 .estado {
-  margin-top: 8vh;
   font-family: "Poppins";
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.numero input,
+::-webkit-input-placeholder {
+  width: 10vh;
+  display: flex;
+  text-align: center;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+}
+
+.numero input :focus {
+  width: 10vh;
+  display: flex;
+  text-align: center;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
 }
 
 .imgCidade {
