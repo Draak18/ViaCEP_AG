@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #084b71;
+  background-color: #0228a3;
   color: white;
   height: 10vh;
 }
@@ -134,9 +134,48 @@ body {
   max-width: 100%;
   height: auto;
 }
+.N{
+  margin-top: 5vh;
+  font-family: "Poppins";
+}
+
+#rua{
+
+}
 
 @media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 640px) {
+.logradouro,
+.numero,
+.bairro,
+.cidade,
+.estado {
+  margin-top: 8vh;
+  font-family: "Poppins";
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.imgCidade {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.imgCidade img {
+  max-width: 100%;
+  height: auto;
+}
+
+.N{
+  margin-top: 0;
+  font-family: "Poppins";
+}
 }
