@@ -1,3 +1,8 @@
 config.json
 node_modules
 setting.json
+
+
+ <div class="numero">
+            <label>Número: <span id="numero"></span></label>
+ </div>
