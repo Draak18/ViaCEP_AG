@@ -94,8 +94,12 @@ body {
 .bairro,
 .cidade,
 .estado {
-  margin-top: 5vh;
+  margin-top: 8vh;
   font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgCidade {
@@ -122,4 +126,35 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+.logradouro,
+.numero,
+.bairro,
+.cidade,
+.estado {
+  margin-top: 8vh;
+  font-family: "Poppins";
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.imgCidade {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.imgCidade img {
+  max-width: 100%;
+  height: auto;
+}
+
+.N{
+  margin-top: 0;
+  font-family: "Poppins";
+}
 }

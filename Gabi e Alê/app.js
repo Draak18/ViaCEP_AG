@@ -25,11 +25,11 @@ function limpa_formulário_cep() {
 
 function meu_callback(conteudo) {
   if (!("erro" in conteudo)) {
-    document.getElementById("rua").innerText = conteudo.logradouro;
-    document.getElementById("numero").innerText = conteudo.numero;
-    document.getElementById("bairro").innerText = conteudo.bairro;
-    document.getElementById("cidade").innerText = conteudo.localidade;
-    document.getElementById("uf").innerText = conteudo.uf;
+    document.getElementById("lugarUf").innerText = conteudo.uf;
+    document.getElementById("lugarCidade").innerText = conteudo.localidade;
+    document.getElementById("lugarBairro").innerText = conteudo.bairro;
+    document.getElementById("lugarRua").innerText = conteudo.logradouro;
+    document.getElementById("lugarNumero").innerText = conteudo.numero;
   } else {
     limpa_formulário_cep();
     alert("CEP não encontrado.");
